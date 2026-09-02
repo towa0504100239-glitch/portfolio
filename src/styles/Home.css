@@ -4,7 +4,7 @@
   --background: #f5f0e8;
   --surface: #ebe3d7;
   --surface-dark: #ded3c3;
-  --text: #292621;
+  --text: #36322c;
   --subtext: #777066;
   --line: #cec5b8;
   --white: #faf8f4;
@@ -24,17 +24,69 @@ body {
   color: var(--text);
   font-family: "DM Sans", "Noto Sans JP", sans-serif;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  animation: introExit 1.8s ease 1.5s forwards;
+}
+.introText {
+  display: flex;
+  gap: 12px;
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.introText span {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: wordIn 0.7s ease forwards;
+}
+.introText span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.introText span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.introText span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+@keyframes wordIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes introExit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.mobileMenu {
+  display: none;
+}
 .home {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  animation: homeIn 3.2s ease;
 }
-
+@keyframes homeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header {
   height: 90px;
   padding: 0 6vw;
@@ -42,34 +94,28 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-
 .logo {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.12em;
 }
-
 .nav {
   display: flex;
   gap: 36px;
 }
-
 .nav a {
   font-size: 13px;
   color: var(--subtext);
   transition: 0.2s;
 }
-
 .nav a:hover {
   color: var(--text);
 }
-
 .menuButton {
   display: none;
   border: 0;
   background: none;
 }
-
 .hero {
   min-height: calc(100vh - 90px);
   padding: 7vh 8vw 10vh;
@@ -78,7 +124,6 @@ a {
   gap: 7vw;
   align-items: center;
 }
-
 .heroSub,
 .smallTitle,
 .contactNumber {
@@ -87,7 +132,6 @@ a {
   letter-spacing: 0.18em;
   color: var(--subtext);
 }
-
 .hero h1 {
   margin: 0;
   font-size: clamp(58px, 7vw, 110px);
@@ -95,12 +139,10 @@ a {
   letter-spacing: -0.06em;
   font-weight: 500;
 }
-
 .hero h1 span,
 .contact h2 span {
   color: #91877a;
 }
-
 .heroDescription {
   margin: 45px 0;
   font-family: "Noto Sans JP", sans-serif;
@@ -108,7 +150,6 @@ a {
   line-height: 2;
   color: var(--subtext);
 }
-
 .viewWorks {
   display: flex;
   width: fit-content;
@@ -118,7 +159,6 @@ a {
   border-bottom: 1px solid var(--text);
   font-size: 13px;
 }
-
 .heroImage {
   aspect-ratio: 4 / 5;
   background: var(--surface-dark);
@@ -129,50 +169,43 @@ a {
   font-size: 11px;
   letter-spacing: 0.15em;
 }
-
 .imageCaption {
   margin-top: 12px;
   font-size: 9px;
   letter-spacing: 0.14em;
   color: var(--subtext);
 }
-
 .section {
   padding: 130px 8vw;
 }
-
 .sectionHeading {
   display: flex;
   gap: 25px;
   align-items: flex-start;
   margin-bottom: 75px;
 }
-
 .sectionHeading > p,
 .worksHeading > div > p {
-  margin: 11px 0 0;
-  font-size: 10px;
+  margin: 7px 0 0;
+  font-size: 16px;
+  font-weight: 500;
   color: var(--subtext);
 }
-
 .sectionHeading h2 {
   margin: 0;
   font-size: clamp(42px, 5vw, 70px);
   font-weight: 500;
   letter-spacing: -0.04em;
 }
-
 .about {
   background: var(--white);
 }
-
 .aboutContent {
   display: grid;
   grid-template-columns: 0.75fr 1fr;
   gap: 10vw;
   align-items: center;
 }
-
 .aboutImage {
   aspect-ratio: 4 / 5;
   max-width: 430px;
@@ -184,11 +217,9 @@ a {
   font-size: 11px;
   letter-spacing: 0.15em;
 }
-
 .aboutText {
   max-width: 600px;
 }
-
 .aboutText h3 {
   margin: 0 0 40px;
   font-family: "Noto Sans JP", sans-serif;
@@ -196,18 +227,15 @@ a {
   line-height: 1.55;
   font-weight: 500;
 }
-
 .aboutText > p:not(.smallTitle) {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   line-height: 2.2;
   color: var(--subtext);
 }
-
 .skillGrid {
   border-top: 1px solid var(--line);
 }
-
 .skillCard {
   padding: 35px 0;
   display: grid;
@@ -215,50 +243,41 @@ a {
   border-bottom: 1px solid var(--line);
   align-items: center;
 }
-
 .skillCard > span {
   font-size: 10px;
   color: var(--subtext);
 }
-
 .skillCard h3 {
   margin: 0;
   font-size: 23px;
   font-weight: 500;
 }
-
 .skillCard p {
   margin: 0;
   color: var(--subtext);
   font-size: 13px;
 }
-
 .works {
   background: #e9e1d5;
 }
-
 .worksHeading {
   justify-content: space-between;
 }
-
 .worksHeading > div {
   display: flex;
   gap: 25px;
 }
-
 .moreLink {
   margin-top: 25px;
   font-size: 12px;
   border-bottom: 1px solid var(--text);
   padding-bottom: 6px;
 }
-
 .workGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 45px;
 }
-
 .workImage {
   aspect-ratio: 16 / 10;
   background: #d5cab9;
@@ -269,57 +288,47 @@ a {
   font-size: 10px;
   letter-spacing: 0.14em;
 }
-
 .workInfo {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
 }
-
 .workInfo p {
   margin: 0 0 7px;
   font-size: 9px;
   color: var(--subtext);
 }
-
 .workInfo h3 {
   margin: 0;
   font-size: 25px;
   font-weight: 500;
 }
-
 .workArrow {
   font-size: 22px;
 }
-
 .experienceList {
   border-top: 1px solid var(--line);
 }
-
 .experienceItem {
   display: grid;
   grid-template-columns: 30% 1fr;
   padding: 30px 0;
   border-bottom: 1px solid var(--line);
 }
-
 .experienceItem > p {
   margin: 4px 0;
   font-size: 10px;
   color: var(--subtext);
 }
-
 .experienceItem h3 {
   margin: 0 0 6px;
   font-size: 20px;
   font-weight: 500;
 }
-
 .experienceItem span {
   color: var(--subtext);
   font-size: 12px;
 }
-
 .contact {
   min-height: 70vh;
   background: var(--text);
@@ -328,11 +337,9 @@ a {
   flex-direction: column;
   justify-content: center;
 }
-
 .contactNumber {
   color: #aaa095;
 }
-
 .contact h2 {
   margin: 0;
   font-size: clamp(55px, 8vw, 110px);
@@ -340,14 +347,12 @@ a {
   letter-spacing: -0.05em;
   font-weight: 500;
 }
-
 .contact > p:not(.contactNumber) {
   margin: 40px 0;
   font-family: "Noto Sans JP", sans-serif;
   color: #aaa095;
   font-size: 13px;
 }
-
 .contactButton {
   width: 200px;
   padding: 16px 0;
@@ -356,7 +361,6 @@ a {
   border-bottom: 1px solid var(--background);
   font-size: 13px;
 }
-
 footer {
   padding: 30px 8vw;
   display: flex;
@@ -366,93 +370,151 @@ footer {
   font-size: 9px;
   letter-spacing: 0.1em;
 }
-
+.backToTop {
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--text);
+  font-size: 18px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 999;
+}
+.backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.backToTop:hover {
+  transform: translateY(-3px);
+}
 @media (max-width: 768px) {
   .header {
     height: 75px;
     padding: 0 6vw;
   }
-
   .nav {
     display: none;
   }
-
-  .menuButton {
-    width: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 5px 0;
-  }
-
+ .menuButton {
+  position: fixed;
+  top: 30px;
+  right: 6vw;
+  z-index: 1001;
+  width: 28px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
   .menuButton span {
+    display: block;
     width: 100%;
     height: 1px;
     background: var(--text);
+    transition: transform 0.3s ease;
   }
-
+  .menuButton.open span:first-child {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  .menuButton.open span:last-child {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 60px;
+    background: var(--background);
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 1000;
+  }
+  .mobileMenu.open {
+    transform: translateX(0);
+  }
+  .mobileMenu a {
+    font-size: 28px;
+    font-weight: 500;
+  }
   .hero {
     min-height: auto;
     padding: 70px 7vw 100px;
     grid-template-columns: 1fr;
   }
-
   .hero h1 {
     font-size: clamp(55px, 16vw, 80px);
   }
-
   .heroVisual {
     margin-top: 30px;
     width: 75%;
     margin-left: auto;
   }
-
   .section {
     padding: 90px 7vw;
   }
-
   .sectionHeading {
     margin-bottom: 50px;
   }
-
   .aboutContent {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-
   .aboutImage {
     width: 75%;
   }
-
   .skillCard {
     grid-template-columns: 40px 1fr;
     gap: 10px;
   }
-
   .skillCard p {
     grid-column: 2;
     margin-top: 10px;
     line-height: 1.7;
   }
-
   .workGrid {
     grid-template-columns: 1fr;
   }
-
   .worksHeading {
     align-items: flex-end;
   }
-
   .experienceItem {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-
   .contact {
     min-height: 70vh;
   }
-
   footer {
     gap: 30px;
   }
+  .backToTop {
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+}
 }

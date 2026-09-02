@@ -1,8 +1,44 @@
 import "../styles/Home.css";
+import { useState,useEffect } from "react";
 
 const Home = () => {
+const [menuOpen, setMenuOpen] = useState(false);
+const [showBackToTop, setShowBackToTop] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    const distanceFromBottom =
+      document.documentElement.scrollHeight -
+      (window.scrollY + window.innerHeight);
+
+    setShowBackToTop(distanceFromBottom <= 800);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+const [introVisible, setIntroVisible] = useState(true);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIntroVisible(false);
+  }, 3500);
+
+  return () => clearTimeout(timer);
+}, []);
   return (
     <div className="home">
+        {introVisible && (
+        <div className="intro">
+            <div className="introText">
+            <span>Think.</span>
+            <span>Build.</span>
+            <span>Refine.</span>
+            </div>
+        </div>
+        )}
       <header className="header">
         <a href="#top" className="logo">
           SERIKA OSHIMA
@@ -16,10 +52,31 @@ const Home = () => {
           <a href="#contact">Contact</a>
         </nav>
 
-        <button className="menuButton" aria-label="メニューを開く">
-          <span />
-          <span />
+        <button
+            className={`menuButton ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="メニューを開く"
+            >
+            <span />
+            <span />
         </button>
+        <div className={`mobileMenu ${menuOpen ? "open" : ""}`}>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+                About
+            </a>
+            <a href="#skills" onClick={() => setMenuOpen(false)}>
+                Skills
+            </a>
+            <a href="#works" onClick={() => setMenuOpen(false)}>
+                Works
+            </a>
+            <a href="#experience" onClick={() => setMenuOpen(false)}>
+                Experience
+            </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+                Contact
+            </a>
+        </div>
       </header>
 
       <main>
@@ -202,17 +259,40 @@ const Home = () => {
 
           <p>ご覧いただきありがとうございました。</p>
 
-          <a href="mailto:example@example.com" className="contactButton">
-            Contact
-            <span>↗</span>
-          </a>
+          <div className="contactLinks">
+            <a
+                href="https://github.com/towa0504100239-glitch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contactButton"
+            >
+                GitHub
+                <span>↗</span>
+            </a>
+
+            <a
+                href="https://x.com/towa_engn?s=11"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contactButton"
+            >
+                X
+                <span>↗</span>
+            </a>
+        </div>
         </section>
       </main>
 
       <footer>
         <p>© 2026 SERIKA OSHIMA</p>
-        <a href="#top">BACK TO TOP ↑</a>
       </footer>
+      <a
+        href="#top"
+        className={`backToTop ${showBackToTop ? "show" : ""}`}
+        aria-label="ページトップへ戻る"
+        >
+        ↑
+        </a>
     </div>
   );
 };
