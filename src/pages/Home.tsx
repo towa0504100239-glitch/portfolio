@@ -1,5 +1,8 @@
 import "../styles/Home.css";
 import { useState,useEffect } from "react";
+import taskQuestImage from "../assets/taskQuest.png";
+import fitBuddyImage from "../assets/fitbuddy.png";
+import colorSelectImage from "../assets/color_select.png";
 
 const Home = () => {
 const [menuOpen, setMenuOpen] = useState(false);
@@ -82,20 +85,19 @@ useEffect(() => {
       <main>
         <section className="hero" id="top">
           <div className="heroText">
-            <p className="heroSub">PORTFOLIO / 2026</p>
-
+            <p className="heroSub">SYSTEM ENGINEER / PORTFOLIO 2026</p>
             <h1>
-              Design,
+              Think,
               <br />
-              Develop,
+              Build,
               <br />
-              <span>and Create.</span>
+              <span>and Improve.</span>
             </h1>
 
             <p className="heroDescription">
-              ユーザーにとって使いやすいものを考え、
+              利用者の課題を考え、技術で形にする。
               <br />
-              デザインから開発まで形にしていきます。
+              システム全体を考えられるエンジニアを目指しています。
             </p>
 
             <a href="#works" className="viewWorks">
@@ -125,21 +127,21 @@ useEffect(() => {
 
             <div className="aboutText">
               <p className="smallTitle">WHO I AM</p>
-
               <h3>
-                考えて、試して、
+                実装だけでなく、
                 <br />
-                より良い形へ。
+                システム全体を考える。
               </h3>
 
               <p>
-                名古屋工学院専門学校で情報技術を学びながら、
-                Web・アプリケーション開発に取り組んでいます。
+                名古屋工学院専門学校 高度情報学科で、
+                システム開発・ネットワーク・データベースなどのIT技術を学んでいます。
               </p>
 
               <p>
-                フロントエンドを中心に、バックエンドや設計にも領域を広げ、
-                ユーザーの課題を技術で解決できるエンジニアを目指しています。
+                約2年間の長期インターンではWeb開発を中心に、
+                設計・データベース・実装・運用・保守まで経験しました。
+                現在はJava / Spring Bootを使用したバックエンド開発にも取り組んでいます。
               </p>
             </div>
           </div>
@@ -166,8 +168,8 @@ useEffect(() => {
 
             <div className="skillCard">
               <span>03</span>
-              <h3>Others</h3>
-              <p>Git / GitHub / WordPress / Illustrator / Photoshop</p>
+              <h3>Tools</h3>
+              <p>Git / GitHub / WordPress / Postman</p>
             </div>
           </div>
         </section>
@@ -187,27 +189,33 @@ useEffect(() => {
           <div className="workGrid">
             <article className="workCard">
               <div className="workImage">
-                <span>PROJECT IMAGE</span>
+                <img src={taskQuestImage} alt="Task Quest" />
               </div>
 
               <div className="workInfo">
                 <div>
-                  <p>01 / WEB APPLICATION</p>
-                  <h3>Task Quest</h3>
+                  <p>01 / PERSONAL DEVELOPMENT</p>
+                    <h3>Task Quest</h3>
+                    <span className="workTech">
+                      React / Spring Boot / MySQL
+                    </span>
                 </div>
                 <span className="workArrow">↗</span>
               </div>
             </article>
 
             <article className="workCard">
-              <div className="workImage">
-                <span>PROJECT IMAGE</span>
-              </div>
+             <div className="workImage">
+              <img src={fitBuddyImage} alt="FitBuddy" />
+            </div>
 
               <div className="workInfo">
                 <div>
-                  <p>02 / MOBILE APPLICATION</p>
-                  <h3>FitBuddy</h3>
+                  <p>02 / TEAM DEVELOPMENT</p>
+                    <h3>FitBuddy</h3>
+                    <span className="workTech">
+                      React Native / TypeScript / Expo
+                    </span>
                 </div>
                 <span className="workArrow">↗</span>
               </div>
@@ -223,28 +231,106 @@ useEffect(() => {
 
           <div className="experienceList">
             <div className="experienceItem">
-              <p>2024 — PRESENT</p>
+              <p>2022.11</p>
               <div>
-                <h3>Web Development</h3>
-                <span>Long-term Internship</span>
+                <h3>ITパスポート 取得</h3>
+                <span>資格</span>
               </div>
             </div>
 
             <div className="experienceItem">
-              <p>2026</p>
+              <p>2023.10</p>
               <div>
-                <h3>Hackathon</h3>
-                <span>Application Development</span>
+                <h3>北澤ゆうり様 HP制作</h3>
+                <span>Webサイト制作</span>
               </div>
             </div>
 
             <div className="experienceItem">
-              <p>2026</p>
+              <p>2024.05 — 2026.03</p>
               <div>
-                <h3>Personal Development</h3>
-                <span>React / Spring Boot</span>
+                <h3>長期インターン</h3>
+                <span>Web開発 / 設計 / DB / 実装 / 運用・保守</span>
               </div>
             </div>
+
+            <div className="experienceItem">
+              <p>2025.01</p>
+              <div>
+                <h3>基本情報技術者試験 取得</h3>
+                <span>資格</span>
+              </div>
+            </div>
+
+            <div className="experienceItem">
+              <p>2026.05 — 現在</p>
+              <div>
+                <h3>個人開発「Task Quest」</h3>
+                <span>React / TypeScript / Java / Spring Boot / MySQL</span>
+              </div>
+            </div>
+
+            <div className="experienceItem">
+              <p>2026.07</p>
+              <div>
+                <h3>Matsuriba 参加</h3>
+                <span>ハッカソン / チーム開発</span>
+              </div>
+            </div>
+
+            <div className="experienceItem">
+              <p>2026.07</p>
+              <div>
+                <h3>Java SE Bronze 取得</h3>
+                <span>資格</span>
+              </div>
+            </div>
+
+            <div className="experienceItem">
+              <p>2026.08</p>
+              <div>
+                <h3>The Hack 2026 出場</h3>
+                <span>ハッカソン</span>
+              </div>
+            </div>
+
+            <div className="experienceItem">
+              <p>2026.08</p>
+              <div>
+                <h3>色合わせミニゲーム 制作</h3>
+                <span>React / TypeScript</span>
+              </div>
+            </div>
+
+            <div className="experienceItem">
+              <p>2026.09</p>
+              <div>
+                <h3>ポートフォリオサイト 制作</h3>
+                <span>React / TypeScript</span>
+              </div>
+            </div>
+
+            <div className="experienceItem">
+              <p>2026.09</p>
+              <div>
+                <h3>HACK STAGE 3 参加予定</h3>
+                <span>ハッカソン / チーム開発</span>
+              </div>
+            </div>
+            <div className="experienceItem">
+              <p>2026.10</p>
+              <div>
+                <h3>技育CAMP ハッカソン 参加予定</h3>
+                <span>ハッカソン / チーム開発</span>
+              </div>
+            </div>
+            <div className="experienceItem">
+            <p>2026.11</p>
+            <div>
+              <h3>AIピッチコンテスト 応募予定</h3>
+              <span>AI / ピッチコンテスト</span>
+            </div>
+          </div>
           </div>
         </section>
 

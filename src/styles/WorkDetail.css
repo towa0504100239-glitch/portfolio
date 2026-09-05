@@ -1,0 +1,357 @@
+.workDetail {
+  min-height: 100vh;
+  background: #f5f0e8;
+  color: #292621;
+}
+
+/* ==============================
+   Header
+============================== */
+
+.detailHeader {
+  height: 90px;
+  padding: 0 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(41, 38, 33, 0.12);
+}
+
+.detailLogo,
+.detailBack {
+  color: #292621;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+}
+
+.detailLogo {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.detailBack {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailBack span {
+  transition: transform 0.3s ease;
+}
+
+.detailBack:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* ==============================
+   Hero
+============================== */
+
+.detailHero {
+  padding: 120px 8vw 80px;
+}
+
+.detailNumber,
+.detailSectionNumber {
+  color: #8b8176;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.detailHero h1 {
+  margin: 20px 0 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(60px, 10vw, 140px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.detailCatch {
+  margin: 30px 0 0;
+  font-size: 18px;
+}
+
+/* ==============================
+   Project Meta
+============================== */
+
+.detailMeta {
+  margin-top: 90px;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-top: 1px solid rgba(41, 38, 33, 0.18);
+}
+
+.detailMeta span {
+  color: #8b8176;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.detailMeta p {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==============================
+   Main Image
+============================== */
+
+.detailMainImage {
+  margin: 0 8vw;
+  overflow: hidden;
+}
+
+.detailMainImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ==============================
+   Detail Sections
+============================== */
+
+.detailSection {
+  margin: 0 8vw;
+  padding: 100px 0;
+}
+
+.detailSectionNumber {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.detailSectionContent {
+  display: block;
+}
+
+.detailSectionContent h2 {
+  margin: 0 0 40px;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.04em;
+}
+
+.detailText {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.detailText p {
+  margin: 0 0 24px;
+  color: #514c46;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.detailText p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==============================
+   Features
+============================== */
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  border-top: 1px solid rgba(41, 38, 33, 0.18);
+}
+
+.featureItem {
+  padding: 35px;
+  border-bottom: 1px solid rgba(41, 38, 33, 0.18);
+}
+
+.featureItem:nth-child(odd) {
+  border-right: 1px solid rgba(41, 38, 33, 0.18);
+}
+
+.featureItem span {
+  color: #8b8176;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+}
+
+.featureItem h3 {
+  margin: 20px 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.featureItem p {
+  margin: 0;
+  color: #6f6963;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==============================
+   Project Links
+============================== */
+
+.detailLinks {
+  margin: 0 8vw;
+  padding: 100px 0;
+}
+
+.detailLinks > p {
+  margin: 0;
+  color: #8b8176;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.detailLinks > div {
+  margin-top: 30px;
+}
+
+.detailLinks a {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #292621;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(22px, 3vw, 36px);
+  border-top: 1px solid rgba(41, 38, 33, 0.18);
+}
+
+.detailLinks a:last-child {
+  border-bottom: 1px solid rgba(41, 38, 33, 0.18);
+}
+
+.detailLinks a span {
+  transition: transform 0.3s ease;
+}
+
+.detailLinks a:hover span {
+  transform: translate(5px, -5px);
+}
+.detailSection {
+  margin: 0 8vw;
+  padding: 100px 0;
+  border-bottom: 1px solid rgba(41, 38, 33, 0.1);
+}
+.detailSection.v2{
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+/* ==============================
+   Footer
+============================== */
+
+.detailFooter {
+  padding: 40px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(41, 38, 33, 0.12);
+}
+
+.detailFooter a,
+.detailFooter p {
+  margin: 0;
+  color: #6f6963;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 768px) {
+  .detailHeader {
+    height: 75px;
+    padding: 0 24px;
+  }
+
+  .detailHero {
+    padding: 90px 24px 60px;
+  }
+
+  .detailHero h1 {
+    font-size: clamp(52px, 17vw, 80px);
+  }
+
+  .detailCatch {
+    font-size: 16px;
+  }
+
+  .detailMeta {
+    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+  }
+
+  .detailMainImage {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .detailSection {
+    margin: 0 24px;
+    padding: 70px 0;
+  }
+
+  .detailSectionNumber {
+    margin-bottom: 25px;
+  }
+
+  .detailSectionContent h2 {
+    margin-bottom: 35px;
+    font-size: 32px;
+  }
+
+  .detailText {
+    max-width: none;
+    margin: 0;
+  }
+
+  .detailText p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .featureGrid {
+    display: block;
+    margin-top: 40px;
+  }
+
+  .featureItem {
+    padding: 30px 0;
+    border-right: 0;
+  }
+
+  .featureItem:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .detailLinks {
+    margin: 0 24px;
+    padding: 70px 0;
+  }
+
+  .detailLinks a {
+    font-size: 20px;
+  }
+
+  .detailFooter {
+    padding: 30px 24px;
+  }
+}
