@@ -413,6 +413,18 @@ footer {
   height: 100%;
   object-fit: contain;
 }
+.heroImage,
+.aboutImage {
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroImage img,
+.aboutImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 @media (max-width: 768px) {
   .header {
     height: 75px;
