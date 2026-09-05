@@ -2,7 +2,6 @@ import "../styles/Home.css";
 import { useState,useEffect } from "react";
 import taskQuestImage from "../assets/taskQuest.png";
 import fitBuddyImage from "../assets/fitbuddy.png";
-import colorSelectImage from "../assets/color_select.png";
 
 const Home = () => {
 const [menuOpen, setMenuOpen] = useState(false);
