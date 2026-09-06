@@ -1,5 +1,7 @@
 import "../styles/Works.css";
 
+import { Link } from "react-router-dom";
+
 import taskQuestImage from "../assets/taskQuest.png";
 import fitBuddyImage from "../assets/fitbuddy.png";
 import colorSelectImage from "../assets/color_select.png";
@@ -8,14 +10,14 @@ const Works = () => {
   return (
     <div className="worksPage">
       <header className="worksHeader">
-        <a href="/" className="worksLogo">
+        <Link to="/" className="worksLogo">
           SERIKA OSHIMA
-        </a>
+        </Link>
 
-        <a href="/" className="backHome">
+        <Link to="/" className="backHome">
           Home
-          <span>↗</span>
-        </a>
+          <span className="arrowIcon" aria-hidden="true" />
+        </Link>
       </header>
 
       <main>
@@ -70,13 +72,13 @@ const Works = () => {
                   自分の積み重ねとして実感できるサービスを目指して開発しています。
                 </p>
 
-                <a
-                  href="/works/task-quest"
+                <Link
+                  to="/works/task-quest"
                   className="viewProject"
                 >
                   View Project
-                  <span>↗</span>
-                </a>
+                  <span className="arrowIcon" aria-hidden="true" />
+                </Link>
               </div>
             </div>
           </article>
@@ -119,13 +121,13 @@ const Works = () => {
                   日常の「歩く」をゲームとして楽しめる体験を目指しました。
                 </p>
 
-                <a
-                  href="/works/fitbuddy"
+                <Link
+                  to="/works/fitbuddy"
                   className="viewProject"
                 >
                   View Project
-                  <span>↗</span>
-                </a>
+                  <span className="arrowIcon" aria-hidden="true" />
+                </Link>
               </div>
             </div>
           </article>
@@ -168,13 +170,13 @@ const Works = () => {
                   シンプルなルールとスマートフォンでの操作性を重視して制作しました。
                 </p>
 
-                <a
-                  href="/works/color-game"
+                <Link
+                  to="/works/color-game"
                   className="viewProject"
                 >
                   View Project
-                  <span>↗</span>
-                </a>
+                  <span className="arrowIcon" aria-hidden="true" />
+                </Link>
               </div>
             </div>
           </article>
@@ -182,7 +184,7 @@ const Works = () => {
       </main>
 
       <footer className="worksFooter">
-        <a href="/">← Back to Home</a>
+        <Link to="/">← Back to Home</Link>
         <p>© 2026 SERIKA OSHIMA</p>
       </footer>
     </div>

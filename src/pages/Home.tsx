@@ -212,7 +212,7 @@ const Home = () => {
             </div>
 
             <Link to="/works" className="moreLink">
-              More Works →
+              More Works →︎
             </Link>
           </div>
 
@@ -235,7 +235,7 @@ const Home = () => {
                   </span>
                 </div>
 
-                <span className="workArrow">↗</span>
+                <span className="workArrow">↗︎</span>
               </div>
             </article>
 
@@ -257,7 +257,7 @@ const Home = () => {
                   </span>
                 </div>
 
-                <span className="workArrow">↗</span>
+                <span className="workArrow">↗︎</span>
               </div>
             </article>
           </div>
@@ -406,7 +406,7 @@ const Home = () => {
               className="contactButton"
             >
               GitHub
-              <span>↗</span>
+              <span>↗︎</span>
             </a>
 
             <a
@@ -416,7 +416,7 @@ const Home = () => {
               className="contactButton"
             >
               X
-              <span>↗</span>
+              <span>↗︎</span>
             </a>
           </div>
         </section>

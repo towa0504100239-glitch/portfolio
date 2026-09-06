@@ -204,7 +204,49 @@
 .worksMobileBreak {
   display: none;
 }
+/* =========================
+   Arrow Icon
+========================= */
 
+.arrowIcon {
+  position: relative;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.arrowIcon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+}
+.arrowIcon::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 12px;
+  height: 1.5px;
+  background-color: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+.backHome {
+  display: inline-flex;
+  align-items: center;
+}
+
+.viewProject {
+  display: inline-flex;
+  align-items: center;
+}
 @media (max-width: 768px) {
   .worksHeader {
     height: 75px;
