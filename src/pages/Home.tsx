@@ -1,11 +1,12 @@
 import "../styles/Home.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import taskQuestImage from "../assets/taskQuest.png";
 import fitBuddyImage from "../assets/fitbuddy.png";
 import topImage from "../assets/top.png";
 import aboutImage from "../assets/about.png";
-import { Link } from "react-router-dom";
+
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -94,9 +95,7 @@ const Home = () => {
       <main>
         <section className="hero" id="top">
           <div className="heroText">
-            <p className="heroSub">
-              SYSTEM ENGINEER / PORTFOLIO 2026
-            </p>
+            <p className="heroSub">SYSTEM ENGINEER / PORTFOLIO 2026</p>
 
             <h1>
               Think,
@@ -126,9 +125,7 @@ const Home = () => {
               />
             </div>
 
-            <p className="imageCaption">
-              WEB / APPLICATION / DESIGN
-            </p>
+            <p className="imageCaption">WEB / APPLICATION / DESIGN</p>
           </div>
         </section>
 
@@ -155,18 +152,9 @@ const Home = () => {
                 システム全体を考える。
               </h3>
 
-              <p>
-                名古屋工学院専門学校 高度情報学科で、
-                システム開発・ネットワーク・データベースなどの
-                IT技術を学んでいます。
-              </p>
+              <p>名古屋工学院専門学校 高度情報学科で、システム開発・ネットワーク・データベースなどのIT技術を学んでいます。</p>
 
-              <p>
-                約2年間の長期インターンではWeb開発を中心に、
-                設計・データベース・実装・運用・保守まで経験しました。
-                現在はJava / Spring Bootを使用した
-                バックエンド開発にも取り組んでいます。
-              </p>
+              <p>約2年間の長期インターンではWeb開発を中心に、設計・データベース・実装・運用・保守まで経験しました。現在はJava / Spring Bootを使用したバックエンド開発にも取り組んでいます。</p>
             </div>
           </div>
         </section>
@@ -181,25 +169,19 @@ const Home = () => {
             <div className="skillCard">
               <span>01</span>
               <h3>Frontend</h3>
-              <p>
-                React / TypeScript / JavaScript / HTML / CSS
-              </p>
+              <p>React / TypeScript / JavaScript / HTML / CSS</p>
             </div>
 
             <div className="skillCard">
               <span>02</span>
               <h3>Backend</h3>
-              <p>
-                Java / Spring Boot / PHP / Laravel / MySQL
-              </p>
+              <p>Java / Spring Boot / PHP / Laravel / MySQL</p>
             </div>
 
             <div className="skillCard">
               <span>03</span>
               <h3>Tools</h3>
-              <p>
-                Git / GitHub / WordPress / Postman
-              </p>
+              <p>Git / GitHub / WordPress / Postman</p>
             </div>
           </div>
         </section>
@@ -212,7 +194,8 @@ const Home = () => {
             </div>
 
             <Link to="/works" className="moreLink">
-              More Works →︎
+              More Works
+              <span className="arrowIcon" aria-hidden="true" />
             </Link>
           </div>
 
@@ -229,19 +212,18 @@ const Home = () => {
                 <div>
                   <p>01 / PERSONAL DEVELOPMENT</p>
                   <h3>Task Quest</h3>
-
                   <span className="workTech">
                     React / Spring Boot / MySQL
                   </span>
                 </div>
 
                 <Link
-                to="/works/task-quest"
-                className="workArrow"
-                aria-label="Task Questの詳細を見る"
-              >
-                <span className="arrowIcon" aria-hidden="true" />
-              </Link>
+                  to="/works/task-quest"
+                  className="workArrow"
+                  aria-label="Task Questの詳細を見る"
+                >
+                  <span className="arrowIcon" aria-hidden="true" />
+                </Link>
               </div>
             </article>
 
@@ -257,28 +239,24 @@ const Home = () => {
                 <div>
                   <p>02 / TEAM DEVELOPMENT</p>
                   <h3>FitBuddy</h3>
-
                   <span className="workTech">
                     React Native / TypeScript / Expo
                   </span>
                 </div>
 
                 <Link
-                    to="/works/fitbuddy"
-                    className="workArrow"
-                    aria-label="FitBuddyの詳細を見る"
-                  >
-                    <span className="arrowIcon" aria-hidden="true" />
-                  </Link>
+                  to="/works/fitbuddy"
+                  className="workArrow"
+                  aria-label="FitBuddyの詳細を見る"
+                >
+                  <span className="arrowIcon" aria-hidden="true" />
+                </Link>
               </div>
             </article>
           </div>
         </section>
 
-        <section
-          className="experience section"
-          id="experience"
-        >
+        <section className="experience section" id="experience">
           <div className="sectionHeading">
             <p>04</p>
             <h2>Experience</h2>
@@ -305,9 +283,7 @@ const Home = () => {
               <p>2024.05 — 2026.03</p>
               <div>
                 <h3>長期インターン</h3>
-                <span>
-                  Web開発 / 設計 / DB / 実装 / 運用・保守
-                </span>
+                <span>Web開発 / 設計 / DB / 実装 / 運用・保守</span>
               </div>
             </div>
 
@@ -323,9 +299,7 @@ const Home = () => {
               <p>2026.05 — 現在</p>
               <div>
                 <h3>個人開発「Task Quest」</h3>
-                <span>
-                  React / TypeScript / Java / Spring Boot / MySQL
-                </span>
+                <span>React / TypeScript / Java / Spring Boot / MySQL</span>
               </div>
             </div>
 
@@ -396,9 +370,7 @@ const Home = () => {
         </section>
 
         <section className="contact section" id="contact">
-          <p className="contactNumber">
-            05 / CONTACT
-          </p>
+          <p className="contactNumber">05 / CONTACT</p>
 
           <h2>
             Thank you for
@@ -406,9 +378,7 @@ const Home = () => {
             <span>viewing.</span>
           </h2>
 
-          <p>
-            ご覧いただきありがとうございました。
-          </p>
+          <p>ご覧いただきありがとうございました。</p>
 
           <div className="contactLinks">
             <a
@@ -418,7 +388,7 @@ const Home = () => {
               className="contactButton"
             >
               GitHub
-              <span>↗︎</span>
+              <span className="arrowIcon" aria-hidden="true" />
             </a>
 
             <a
@@ -428,7 +398,7 @@ const Home = () => {
               className="contactButton"
             >
               X
-              <span>↗︎</span>
+              <span className="arrowIcon" aria-hidden="true" />
             </a>
           </div>
         </section>

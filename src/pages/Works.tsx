@@ -1,5 +1,4 @@
 import "../styles/Works.css";
-
 import { Link } from "react-router-dom";
 
 import taskQuestImage from "../assets/taskQuest.png";
@@ -42,40 +41,24 @@ const Works = () => {
             <div className="worksItemContent">
               <div className="worksItemHeader">
                 <div>
-                  <p className="worksCategory">
-                    個人開発 / WEB APPLICATION
-                  </p>
+                  <p className="worksCategory">個人開発 / WEB APPLICATION</p>
 
                   <h2>Task Quest</h2>
 
-                  <p className="worksCatch">
-                    タスク管理 × ゲーム要素
-                  </p>
+                  <p className="worksCatch">タスク管理 × ゲーム要素</p>
                 </div>
 
-                <p className="worksTech">
-                  React / TypeScript / Spring Boot / MySQL
-                </p>
+                <p className="worksTech">React / TypeScript / Spring Boot / MySQL</p>
               </div>
 
               <div className="worksImage">
-                <img
-                  src={taskQuestImage}
-                  alt="Task Quest"
-                />
+                <img src={taskQuestImage} alt="Task Quest" />
               </div>
 
               <div className="worksBottom">
-                <p className="worksDescription">
-                  タスク管理にゲーム要素を取り入れたWebアプリケーションです。
-                  タスクの達成を単なる「消化」ではなく、
-                  自分の積み重ねとして実感できるサービスを目指して開発しています。
-                </p>
+                <p className="worksDescription">タスク管理にゲーム要素を取り入れたWebアプリケーションです。タスクの達成を単なる「消化」ではなく、自分の積み重ねとして実感できるサービスを目指して開発しています。</p>
 
-                <Link
-                  to="/works/task-quest"
-                  className="viewProject"
-                >
+                <Link to="/works/task-quest" className="viewProject">
                   View Project
                   <span className="arrowIcon" aria-hidden="true" />
                 </Link>
@@ -91,40 +74,24 @@ const Works = () => {
             <div className="worksItemContent">
               <div className="worksItemHeader">
                 <div>
-                  <p className="worksCategory">
-                    ハッカソン / TEAM DEVELOPMENT
-                  </p>
+                  <p className="worksCategory">ハッカソン / TEAM DEVELOPMENT</p>
 
                   <h2>FitBuddy</h2>
 
-                  <p className="worksCatch">
-                    歩くことをゲームに。
-                  </p>
+                  <p className="worksCatch">歩くことをゲームに。</p>
                 </div>
 
-                <p className="worksTech">
-                  React Native / TypeScript / Expo
-                </p>
+                <p className="worksTech">React Native / TypeScript / Expo</p>
               </div>
 
               <div className="worksImage">
-                <img
-                  src={fitBuddyImage}
-                  alt="FitBuddy"
-                />
+                <img src={fitBuddyImage} alt="FitBuddy" />
               </div>
 
               <div className="worksBottom">
-                <p className="worksDescription">
-                  歩数とモンスター育成を組み合わせたアプリケーションです。
-                  歩数に応じてモンスターが成長する仕組みを取り入れ、
-                  日常の「歩く」をゲームとして楽しめる体験を目指しました。
-                </p>
+                <p className="worksDescription">歩数とモンスター育成を組み合わせたアプリケーションです。歩数に応じてモンスターが成長する仕組みを取り入れ、日常の「歩く」をゲームとして楽しめる体験を目指しました。</p>
 
-                <Link
-                  to="/works/fitbuddy"
-                  className="viewProject"
-                >
+                <Link to="/works/fitbuddy" className="viewProject">
                   View Project
                   <span className="arrowIcon" aria-hidden="true" />
                 </Link>
@@ -140,40 +107,24 @@ const Works = () => {
             <div className="worksItemContent">
               <div className="worksItemHeader">
                 <div>
-                  <p className="worksCategory">
-                    文化祭 / WEB GAME
-                  </p>
+                  <p className="worksCategory">文化祭 / WEB GAME</p>
 
                   <h2>色合わせミニゲーム</h2>
 
-                  <p className="worksCatch">
-                    30秒で遊べる色合わせゲーム
-                  </p>
+                  <p className="worksCatch">30秒で遊べる色合わせゲーム</p>
                 </div>
 
-                <p className="worksTech">
-                  React / TypeScript
-                </p>
+                <p className="worksTech">React / TypeScript</p>
               </div>
 
               <div className="worksImage">
-                <img
-                  src={colorSelectImage}
-                  alt="色合わせミニゲーム"
-                />
+                <img src={colorSelectImage} alt="色合わせミニゲーム" />
               </div>
 
               <div className="worksBottom">
-                <p className="worksDescription">
-                  文化祭の来場者向けに制作したミニゲームです。
-                  初めて触る人でもすぐに遊べるよう、
-                  シンプルなルールとスマートフォンでの操作性を重視して制作しました。
-                </p>
+                <p className="worksDescription">文化祭の来場者向けに制作したミニゲームです。初めて触る人でもすぐに遊べるよう、シンプルなルールとスマートフォンでの操作性を重視して制作しました。</p>
 
-                <Link
-                  to="/works/color-game"
-                  className="viewProject"
-                >
+                <Link to="/works/color-game" className="viewProject">
                   View Project
                   <span className="arrowIcon" aria-hidden="true" />
                 </Link>
