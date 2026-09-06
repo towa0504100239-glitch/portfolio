@@ -1,18 +1,19 @@
 import "../../styles/WorkDetail.css";
+import { Link } from "react-router-dom";
 import taskQuestImage from "../../assets/taskQuest.png";
 
 const TaskQuest = () => {
   return (
     <div className="workDetail">
       <header className="detailHeader">
-        <a href="/" className="detailLogo">
+        <Link to="/" className="detailLogo">
           SERIKA OSHIMA
-        </a>
+        </Link>
 
-        <a href="/works" className="detailBack">
+        <Link to="/works" className="detailBack">
           Works
-          <span>↗</span>
-        </a>
+          <span className="arrowIcon" aria-hidden="true" />
+        </Link>
       </header>
 
       <main>
@@ -308,8 +309,8 @@ const TaskQuest = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Frontend GitHub
-              <span>↗</span>
+              <span>Frontend GitHub</span>
+              <span className="arrowIcon" aria-hidden="true" />
             </a>
 
             <a
@@ -317,15 +318,15 @@ const TaskQuest = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Backend GitHub
-              <span>↗</span>
+              <span>Backend GitHub</span>
+              <span className="arrowIcon" aria-hidden="true" />
             </a>
           </div>
         </section>
       </main>
 
       <footer className="detailFooter">
-        <a href="/works">← Works</a>
+        <Link to="/works">← Works</Link>
         <p>© 2026 SERIKA OSHIMA</p>
       </footer>
     </div>
