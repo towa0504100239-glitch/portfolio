@@ -235,7 +235,13 @@ const Home = () => {
                   </span>
                 </div>
 
-                <span className="workArrow">↗︎</span>
+                <Link
+                to="/works/task-quest"
+                className="workArrow"
+                aria-label="Task Questの詳細を見る"
+              >
+                <span className="arrowIcon" aria-hidden="true" />
+              </Link>
               </div>
             </article>
 
@@ -257,7 +263,13 @@ const Home = () => {
                   </span>
                 </div>
 
-                <span className="workArrow">↗︎</span>
+                <Link
+                    to="/works/fitbuddy"
+                    className="workArrow"
+                    aria-label="FitBuddyの詳細を見る"
+                  >
+                    <span className="arrowIcon" aria-hidden="true" />
+                  </Link>
               </div>
             </article>
           </div>
