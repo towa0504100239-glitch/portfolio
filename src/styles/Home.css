@@ -437,33 +437,32 @@ footer {
 .arrowIcon {
   position: relative;
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-left: 6px;
+  width: 18px;
+  height: 14px;
   flex-shrink: 0;
 }
 
 .arrowIcon::before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
-  top: 1px;
-  right: 1px;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
+  left: 1px;
+  top: 8px;
+  width: 15px;
+  height: 1px;
+  background: currentColor;
+  transform: rotate(-35deg);
+  transform-origin: right center;
 }
 
 .arrowIcon::after {
   content: "";
   position: absolute;
-  width: 12px;
-  height: 1px;
-  top: 6px;
-  left: 0;
-  background: currentColor;
-  transform: rotate(-45deg);
-  transform-origin: center;
+  right: 0;
+  top: 1px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
 }
 @media (max-width: 768px) {
   .header {
