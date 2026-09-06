@@ -5,7 +5,7 @@ import taskQuestImage from "../assets/taskQuest.png";
 import fitBuddyImage from "../assets/fitbuddy.png";
 import topImage from "../assets/top.png";
 import aboutImage from "../assets/about.png";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -211,9 +211,9 @@ const Home = () => {
               <h2>Works</h2>
             </div>
 
-            <a href="/works" className="moreLink">
+            <Link to="/works" className="moreLink">
               More Works →
-            </a>
+            </Link>
           </div>
 
           <div className="workGrid">
