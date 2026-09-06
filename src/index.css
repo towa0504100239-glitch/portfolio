@@ -111,10 +111,10 @@ code {
   position: absolute;
   top: 0;
   right: 0;
-  width: 7px;
-  height: 7px;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
   box-sizing: border-box;
 }
 
@@ -123,7 +123,7 @@ code {
   position: absolute;
   top: 5.5px;
   left: 0;
-  width: 12px;
+  width: 13px;
   height: 1.5px;
   background: currentColor;
   transform: rotate(-45deg);
