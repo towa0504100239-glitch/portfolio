@@ -434,6 +434,37 @@ footer {
   width: 100%;
   height: auto;
 }
+.arrowIcon {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+
+.arrowIcon::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 1px;
+  right: 1px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+.arrowIcon::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 1px;
+  top: 6px;
+  left: 0;
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
 @media (max-width: 768px) {
   .header {
     height: 75px;
