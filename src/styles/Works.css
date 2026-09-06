@@ -204,40 +204,6 @@
 .worksMobileBreak {
   display: none;
 }
-/* =========================
-   Arrow Icon
-========================= */
-
-.arrowIcon {
-  position: relative;
-  display: inline-block;
-  width: 18px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
-.arrowIcon::before {
-  content: "";
-  position: absolute;
-  left: 1px;
-  top: 8px;
-  width: 15px;
-  height: 1px;
-  background: currentColor;
-  transform: rotate(-35deg);
-  transform-origin: right center;
-}
-
-.arrowIcon::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 1px;
-  width: 7px;
-  height: 7px;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
-}
 .backHome {
   display: inline-flex;
   align-items: center;
