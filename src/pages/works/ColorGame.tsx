@@ -51,6 +51,16 @@ const ColorGame = () => {
           <img src={colorSelectImage} alt="色合わせミニゲーム" />
         </div>
 
+        <div className="detailLiveLink">
+          <a
+            href="https://towa0504100239-glitch.github.io/color_select_game/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            VIEW LIVE
+            <span>↗</span>
+          </a>
+        </div>
         <section className="detailSection">
           <p className="detailSectionNumber">01 / OVERVIEW</p>
 
