@@ -51,16 +51,6 @@ const ColorGame = () => {
           <img src={colorSelectImage} alt="色合わせミニゲーム" />
         </div>
 
-        <div className="detailLiveLink">
-          <a
-            href="https://towa0504100239-glitch.github.io/color_select_game/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            VIEW LIVE
-            <span>↗</span>
-          </a>
-        </div>
         <section className="detailSection">
           <p className="detailSectionNumber">01 / OVERVIEW</p>
 
@@ -188,6 +178,29 @@ const ColorGame = () => {
 
               <p>技術的に多くの機能を追加するのではなく、利用目的に必要な機能を選び、分かりやすく提供することを意識して制作しました。</p>
             </div>
+          </div>
+        </section>
+        <section className="detailLinks">
+          <p>PROJECT LINKS</p>
+
+          <div>
+            <a
+              href="https://towa0504100239-glitch.github.io/color_select_game/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Play Game</span>
+              <span className="arrowIcon" aria-hidden="true" />
+            </a>
+
+            <a
+              href="https://github.com/towa0504100239-glitch/color_select_game"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>GitHub</span>
+              <span className="arrowIcon" aria-hidden="true" />
+            </a>
           </div>
         </section>
       </main>
