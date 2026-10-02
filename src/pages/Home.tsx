@@ -1,16 +1,19 @@
 import "../styles/Home.css";
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import taskQuestImage from "../assets/taskQuest.png";
-import fitBuddyImage from "../assets/fitbuddy.png";
 import topImage from "../assets/top.png";
 import aboutImage from "../assets/about.png";
 
+import { worksNewestFirst } from "../data/works";
+
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showBackToTop, setShowBackToTop] = useState(false);
-  const [introVisible, setIntroVisible] = useState(true);
+  const [showBackToTop, setShowBackToTop] =
+    useState(false);
+  const [introVisible, setIntroVisible] =
+    useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +27,11 @@ const Home = () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
   }, []);
 
   useEffect(() => {
@@ -61,7 +68,9 @@ const Home = () => {
         </nav>
 
         <button
-          className={`menuButton ${menuOpen ? "open" : ""}`}
+          className={`menuButton ${
+            menuOpen ? "open" : ""
+          }`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="メニューを開く"
         >
@@ -69,24 +78,43 @@ const Home = () => {
           <span />
         </button>
 
-        <div className={`mobileMenu ${menuOpen ? "open" : ""}`}>
-          <a href="#about" onClick={() => setMenuOpen(false)}>
+        <div
+          className={`mobileMenu ${
+            menuOpen ? "open" : ""
+          }`}
+        >
+          <a
+            href="#about"
+            onClick={() => setMenuOpen(false)}
+          >
             About
           </a>
 
-          <a href="#skills" onClick={() => setMenuOpen(false)}>
+          <a
+            href="#skills"
+            onClick={() => setMenuOpen(false)}
+          >
             Skills
           </a>
 
-          <a href="#works" onClick={() => setMenuOpen(false)}>
+          <a
+            href="#works"
+            onClick={() => setMenuOpen(false)}
+          >
             Works
           </a>
 
-          <a href="#experience" onClick={() => setMenuOpen(false)}>
+          <a
+            href="#experience"
+            onClick={() => setMenuOpen(false)}
+          >
             Experience
           </a>
 
-          <a href="#contact" onClick={() => setMenuOpen(false)}>
+          <a
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+          >
             Contact
           </a>
         </div>
@@ -95,7 +123,9 @@ const Home = () => {
       <main>
         <section className="hero" id="top">
           <div className="heroText">
-            <p className="heroSub">SYSTEM ENGINEER / PORTFOLIO 2026</p>
+            <p className="heroSub">
+              SYSTEM ENGINEER / PORTFOLIO 2026
+            </p>
 
             <h1>
               Think,
@@ -125,11 +155,16 @@ const Home = () => {
               />
             </div>
 
-            <p className="imageCaption">WEB / APPLICATION / DESIGN</p>
+            <p className="imageCaption">
+              WEB / APPLICATION / DESIGN
+            </p>
           </div>
         </section>
 
-        <section className="about section" id="about">
+        <section
+          className="about section"
+          id="about"
+        >
           <div className="sectionHeading">
             <p>01</p>
             <h2>About</h2>
@@ -152,14 +187,25 @@ const Home = () => {
                 システム全体を考える。
               </h3>
 
-              <p>名古屋工学院専門学校 高度情報学科で、システム開発・ネットワーク・データベースなどのIT技術を学んでいます。</p>
+              <p>
+                名古屋工学院専門学校
+                高度情報学科で、システム開発・ネットワーク・データベースなどのIT技術を学んでいます。
+              </p>
 
-              <p>約2年間の長期インターンではWeb開発を中心に、設計・データベース・実装・運用・保守まで経験しました。現在はJava / Spring Bootを使用したバックエンド開発にも取り組んでいます。</p>
+              <p>
+                約2年間の長期インターンではWeb開発を中心に、設計・データベース・実装・運用・保守まで経験しました。現在はJava
+                /
+                Spring
+                Bootを使用したバックエンド開発にも取り組んでいます。
+              </p>
             </div>
           </div>
         </section>
 
-        <section className="skills section" id="skills">
+        <section
+          className="skills section"
+          id="skills"
+        >
           <div className="sectionHeading">
             <p>02</p>
             <h2>Skills</h2>
@@ -169,94 +215,105 @@ const Home = () => {
             <div className="skillCard">
               <span>01</span>
               <h3>Frontend</h3>
-              <p>React / TypeScript / JavaScript / HTML / CSS</p>
+              <p>
+                React / TypeScript / JavaScript /
+                HTML / CSS
+              </p>
             </div>
 
             <div className="skillCard">
               <span>02</span>
               <h3>Backend</h3>
-              <p>Java / Spring Boot / PHP / Laravel / MySQL</p>
+              <p>
+                Java / Spring Boot / PHP / Laravel /
+                MySQL
+              </p>
             </div>
 
             <div className="skillCard">
               <span>03</span>
               <h3>Tools</h3>
-              <p>Git / GitHub / WordPress / Postman</p>
+              <p>
+                Git / GitHub / WordPress / Postman
+              </p>
             </div>
           </div>
         </section>
 
-        <section className="works section" id="works">
+        {/* WORKS */}
+        <section
+          className="works section"
+          id="works"
+        >
           <div className="sectionHeading worksHeading">
             <div>
               <p>03</p>
               <h2>Works</h2>
             </div>
 
-            <Link to="/works" className="moreLink">
+            <Link
+              to="/works"
+              className="moreLink"
+            >
               More Works
-              <span className="arrowIcon" aria-hidden="true" />
+              <span
+                className="arrowIcon"
+                aria-hidden="true"
+              />
             </Link>
           </div>
 
           <div className="workGrid">
-            <article className="workCard">
-              <div className="workImage">
-                <img
-                  src={taskQuestImage}
-                  alt="Task Quest"
-                />
-              </div>
-
-              <div className="workInfo">
-                <div>
-                  <p>01 / PERSONAL DEVELOPMENT</p>
-                  <h3>Task Quest</h3>
-                  <span className="workTech">
-                    React / Spring Boot / MySQL
-                  </span>
-                </div>
-
-                <Link
-                  to="/works/task-quest"
-                  className="workArrow"
-                  aria-label="Task Questの詳細を見る"
+            {worksNewestFirst
+              .slice(0, 2)
+              .map((work, index) => (
+                <article
+                  className="workCard"
+                  key={work.slug}
                 >
-                  <span className="arrowIcon" aria-hidden="true" />
-                </Link>
-              </div>
-            </article>
+                  <div className="workImage">
+                    <img
+                      src={work.image}
+                      alt={work.imageAlt}
+                    />
+                  </div>
 
-            <article className="workCard">
-              <div className="workImage">
-                <img
-                  src={fitBuddyImage}
-                  alt="FitBuddy"
-                />
-              </div>
+                  <div className="workInfo">
+                    <div>
+                      <p>
+                        {String(
+                          index + 1
+                        ).padStart(2, "0")}{" "}
+                        / {work.category}
+                      </p>
 
-              <div className="workInfo">
-                <div>
-                  <p>02 / TEAM DEVELOPMENT</p>
-                  <h3>FitBuddy</h3>
-                  <span className="workTech">
-                    React Native / TypeScript / Expo
-                  </span>
-                </div>
+                      <h3>{work.title}</h3>
 
-                <Link
-                  to="/works/fitbuddy"
-                  className="workArrow"
-                  aria-label="FitBuddyの詳細を見る"
-                >
-                  <span className="arrowIcon" aria-hidden="true" />
-                </Link>
-              </div>
-            </article>
+                      <span className="workTech">
+                        {work.technology}
+                      </span>
+                    </div>
+
+                    <Link
+                      to={`/works/${work.slug}`}
+                      className="workArrow"
+                      aria-label={`${work.title}の詳細を見る`}
+                    >
+                      <span
+                        className="arrowIcon"
+                        aria-hidden="true"
+                      />
+                    </Link>
+                  </div>
+                </article>
+              ))}
           </div>
         </section>
 
-        <section className="experience section" id="experience">
+        <section
+          className="experience section"
+          id="experience"
+        >
           <div className="sectionHeading">
             <p>04</p>
             <h2>Experience</h2>
@@ -283,7 +340,10 @@ const Home = () => {
               <p>2024.05 — 2026.03</p>
               <div>
                 <h3>長期インターン</h3>
-                <span>Web開発 / 設計 / DB / 実装 / 運用・保守</span>
+                <span>
+                  Web開発 / 設計 / DB / 実装 /
+                  運用・保守
+                </span>
               </div>
             </div>
 
@@ -298,8 +358,13 @@ const Home = () => {
             <div className="experienceItem">
               <p>2026.05 — 現在</p>
               <div>
-                <h3>個人開発「Task Quest」</h3>
-                <span>React / TypeScript / Java / Spring Boot / MySQL</span>
+                <h3>
+                  個人開発「Task Quest」
+                </h3>
+                <span>
+                  React / TypeScript / Java /
+                  Spring Boot / MySQL
+                </span>
               </div>
             </div>
 
@@ -307,7 +372,9 @@ const Home = () => {
               <p>2026.07</p>
               <div>
                 <h3>Matsuriba 参加</h3>
-                <span>ハッカソン / チーム開発</span>
+                <span>
+                  ハッカソン / チーム開発
+                </span>
               </div>
             </div>
 
@@ -330,16 +397,24 @@ const Home = () => {
             <div className="experienceItem">
               <p>2026.08</p>
               <div>
-                <h3>色合わせミニゲーム 制作</h3>
-                <span>React / TypeScript</span>
+                <h3>
+                  色合わせミニゲーム 制作
+                </h3>
+                <span>
+                  React / TypeScript
+                </span>
               </div>
             </div>
 
             <div className="experienceItem">
               <p>2026.09</p>
               <div>
-                <h3>ポートフォリオサイト 制作</h3>
-                <span>React / TypeScript</span>
+                <h3>
+                  ポートフォリオサイト 制作
+                </h3>
+                <span>
+                  React / TypeScript
+                </span>
               </div>
             </div>
 
@@ -347,30 +422,45 @@ const Home = () => {
               <p>2026.09</p>
               <div>
                 <h3>HACK STAGE 3 参加予定</h3>
-                <span>ハッカソン / チーム開発</span>
+                <span>
+                  ハッカソン / チーム開発
+                </span>
               </div>
             </div>
 
             <div className="experienceItem">
               <p>2026.10</p>
               <div>
-                <h3>技育CAMP ハッカソン 参加予定</h3>
-                <span>ハッカソン / チーム開発</span>
+                <h3>
+                  技育CAMP ハッカソン 参加予定
+                </h3>
+                <span>
+                  ハッカソン / チーム開発
+                </span>
               </div>
             </div>
 
             <div className="experienceItem">
               <p>2026.11</p>
               <div>
-                <h3>AIピッチコンテスト 応募予定</h3>
-                <span>AI / ピッチコンテスト</span>
+                <h3>
+                  AIピッチコンテスト 応募予定
+                </h3>
+                <span>
+                  AI / ピッチコンテスト
+                </span>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="contact section" id="contact">
-          <p className="contactNumber">05 / CONTACT</p>
+        <section
+          className="contact section"
+          id="contact"
+        >
+          <p className="contactNumber">
+            05 / CONTACT
+          </p>
 
           <h2>
             Thank you for
@@ -378,7 +468,9 @@ const Home = () => {
             <span>viewing.</span>
           </h2>
 
-          <p>ご覧いただきありがとうございました。</p>
+          <p>
+            ご覧いただきありがとうございました。
+          </p>
 
           <div className="contactLinks">
             <a
@@ -388,7 +480,10 @@ const Home = () => {
               className="contactButton"
             >
               GitHub
-              <span className="arrowIcon" aria-hidden="true" />
+              <span
+                className="arrowIcon"
+                aria-hidden="true"
+              />
             </a>
 
             <a
@@ -398,7 +493,10 @@ const Home = () => {
               className="contactButton"
             >
               X
-              <span className="arrowIcon" aria-hidden="true" />
+              <span
+                className="arrowIcon"
+                aria-hidden="true"
+              />
             </a>
           </div>
         </section>
@@ -410,7 +508,9 @@ const Home = () => {
 
       <a
         href="#top"
-        className={`backToTop ${showBackToTop ? "show" : ""}`}
+        className={`backToTop ${
+          showBackToTop ? "show" : ""
+        }`}
         aria-label="ページトップへ戻る"
       >
         ↑
