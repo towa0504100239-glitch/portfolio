@@ -2,6 +2,7 @@ import taskQuestImage from "../assets/taskQuest.png";
 import fitBuddyImage from "../assets/fitbuddy.png";
 import colorSelectImage from "../assets/color_select.png";
 import yoriaiImage from "../assets/yoriai.png";
+import { doneeWork } from "./donee";
 export type WorkFeature = {
   title: string;
   description: string;
@@ -508,4 +509,4 @@ export const worksNewestFirst = [...works].sort(
 );
 
 export const getWorkBySlug = (slug: string) =>
-  works.find((work) => work.slug === slug);
+  slug === "donee" ? doneeWork : works.find((work) => work.slug === slug);
