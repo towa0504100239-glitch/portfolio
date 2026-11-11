@@ -211,36 +211,65 @@ a {
 }
 .aboutContent {
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
-  gap: 10vw;
-  align-items: center;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 40px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
 }
-.aboutImage {
-  aspect-ratio: 4 / 5;
-  max-width: 430px;
-  background: var(--surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #a89d8e;
-  font-size: 11px;
+.aboutLead .smallTitle {
+  margin: 0 0 18px;
+  font-size: 12px;
+  line-height: 1.6;
   letter-spacing: 0.15em;
 }
-.aboutText {
-  max-width: 600px;
-}
-.aboutText h3 {
-  margin: 0 0 40px;
+.aboutLead h3 {
+  margin: 0;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: clamp(28px, 3vw, 45px);
-  line-height: 1.55;
+  font-size: clamp(32px, 3.8vw, 48px);
+  line-height: 1.5;
   font-weight: 500;
+  letter-spacing: -0.04em;
 }
-.aboutText > p:not(.smallTitle) {
+.aboutText {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  max-width: 720px;
+}
+.aboutText p {
+  margin: 0 0 20px;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  line-height: 2.2;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text);
+}
+.aboutText p:last-child {
+  margin-bottom: 0;
+}
+.aboutStrengths {
+  grid-column: 1;
+  display: grid;
+  gap: 24px;
+  margin: 0;
+}
+.aboutStrength {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.aboutStrength dt {
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.aboutStrength dd {
+  margin: 0;
   color: var(--subtext);
+  font-size: 15px;
+  line-height: 1.8;
 }
 .skillGrid {
   display: grid;
@@ -505,14 +534,12 @@ footer {
   height: 100%;
   object-fit: contain;
 }
-.heroImage,
-.aboutImage {
+.heroImage {
   width: 100%;
   overflow: hidden;
 }
 
-.heroImage img,
-.aboutImage img {
+.heroImage img {
   display: block;
   width: 100%;
   height: auto;
@@ -597,10 +624,18 @@ footer {
   }
   .aboutContent {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 32px;
   }
-  .aboutImage {
-    width: 75%;
+  .aboutLead h3 {
+    font-size: clamp(30px, 8vw, 36px);
+  }
+  .aboutText,
+  .aboutStrengths {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .aboutText p {
+    font-size: 15px;
   }
   .skillGrid {
     grid-template-columns: 1fr;

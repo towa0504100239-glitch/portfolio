@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import topImage from "../assets/top.png";
-import aboutImage from "../assets/about.png";
 
 import { worksNewestFirst } from "../data/works";
 import { experienceGroups } from "../data/experience";
@@ -232,34 +231,37 @@ const Home = () => {
           </div>
 
           <div className="aboutContent">
-            <div className="aboutImage">
-              <img
-                src={aboutImage}
-                alt="システム全体の構成を表したイメージ"
-              />
-            </div>
-
-            <div className="aboutText">
+            <div className="aboutLead">
               <p className="smallTitle">WHO I AM</p>
-
-              <h3>
-                実装だけでなく、
-                <br />
-                システム全体を考える。
-              </h3>
-
+              <h3>実装だけでなく、システム全体を考える。</h3>
+            </div>
+            <div className="aboutText">
               <p>
-                名古屋工学院専門学校
-                高度情報学科で、システム開発・ネットワーク・データベースなどのIT技術を学んでいます。
+                名古屋工学院専門学校 高度情報学科で、ソフトウェア開発を学んでいます。
               </p>
-
               <p>
-                約2年間の長期インターンではWeb開発を中心に、設計・データベース・実装・運用・保守まで経験しました。現在はJava
-                /
-                Spring
-                Bootを使用したバックエンド開発にも取り組んでいます。
+                約2年間の長期インターンでWeb開発の設計・実装・運用・保守を経験し、現在はハッカソンや個人開発を通じて、フロントエンドからバックエンドまで幅広く取り組んでいます。
+              </p>
+              <p>
+                開発では、単に機能を実装するだけでなく、「誰が、何のために使うのか」を考え、要件定義からシステム全体の設計まで意識することを大切にしています。
+              </p>
+              <p>
+                また、チーム開発ではリーダーや進行管理を経験し、メンバーの得意分野を活かした役割分担や、進捗に応じた調整にも取り組んできました。
+              </p>
+              <p>
+                将来は、技術力とチームをまとめる力の両方を磨き、サービスの企画から開発・改善まで関われるエンジニアを目指しています。
               </p>
             </div>
+            <dl className="aboutStrengths">
+              <div className="aboutStrength">
+                <dt>Development</dt>
+                <dd>フロントエンド・バックエンド双方の開発経験</dd>
+              </div>
+              <div className="aboutStrength">
+                <dt>Collaboration</dt>
+                <dd>チーム開発・要件定義・進行管理</dd>
+              </div>
+            </dl>
           </div>
         </section>
 
