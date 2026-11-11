@@ -7,6 +7,7 @@ import topImage from "../assets/top.png";
 import aboutImage from "../assets/about.png";
 
 import { worksNewestFirst } from "../data/works";
+import { experienceGroups } from "../data/experience";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -319,138 +320,32 @@ const Home = () => {
             <h2>Experience</h2>
           </div>
 
-          <div className="experienceList">
-            <div className="experienceItem">
-              <p>2022.11</p>
-              <div>
-                <h3>ITパスポート 取得</h3>
-                <span>資格</span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2023.10</p>
-              <div>
-                <h3>北澤ゆうり様 HP制作</h3>
-                <span>Webサイト制作</span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2024.05 — 2026.03</p>
-              <div>
-                <h3>長期インターン</h3>
-                <span>
-                  Web開発 / 設計 / DB / 実装 /
-                  運用・保守
-                </span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2025.01</p>
-              <div>
-                <h3>基本情報技術者試験 取得</h3>
-                <span>資格</span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.05 — 現在</p>
-              <div>
-                <h3>
-                  個人開発「Task Quest」
+          <div className="experienceGroups">
+            {experienceGroups.map((group) => (
+              <section
+                className="experienceGroup"
+                aria-labelledby={group.id + '-heading'}
+                key={group.id}
+              >
+                <h3 className="experienceGroupHeading" id={group.id + '-heading'}>
+                  {group.title}
+                  <span>{group.subtitle}</span>
                 </h3>
-                <span>
-                  React / TypeScript / Java /
-                  Spring Boot / MySQL
-                </span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.07</p>
-              <div>
-                <h3>Matsuriba 参加</h3>
-                <span>
-                  ハッカソン / チーム開発
-                </span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.07</p>
-              <div>
-                <h3>Java SE Bronze 取得</h3>
-                <span>資格</span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.08</p>
-              <div>
-                <h3>The Hack 2026 出場</h3>
-                <span>ハッカソン</span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.08</p>
-              <div>
-                <h3>
-                  色合わせミニゲーム 制作
-                </h3>
-                <span>
-                  React / TypeScript
-                </span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.09</p>
-              <div>
-                <h3>
-                  ポートフォリオサイト 制作
-                </h3>
-                <span>
-                  React / TypeScript
-                </span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.09</p>
-              <div>
-                <h3>HACK STAGE 3 参加予定</h3>
-                <span>
-                  ハッカソン / チーム開発
-                </span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.10</p>
-              <div>
-                <h3>
-                  技育CAMP ハッカソン 参加予定
-                </h3>
-                <span>
-                  ハッカソン / チーム開発
-                </span>
-              </div>
-            </div>
-
-            <div className="experienceItem">
-              <p>2026.11</p>
-              <div>
-                <h3>
-                  AIピッチコンテスト 応募予定
-                </h3>
-                <span>
-                  AI / ピッチコンテスト
-                </span>
-              </div>
-            </div>
+                <ol className="experienceList">
+                  {group.entries.map((entry) => (
+                    <li className="experienceItem" key={entry.id}>
+                      <time className="experienceDate" dateTime={entry.date}>
+                        {entry.dateLabel}
+                      </time>
+                      <div>
+                        <h4>{entry.title}</h4>
+                        <p className="experienceDescription">{entry.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ))}
           </div>
         </section>
 

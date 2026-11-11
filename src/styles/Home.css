@@ -149,7 +149,7 @@ a {
 .logo,
 .sectionHeading h2,
 .workInfo h3,
-.experienceItem h3 {
+.experienceItem h4 {
   color: var(--text);
 }
 .heroDescription {
@@ -315,28 +315,63 @@ a {
 .workArrow {
   font-size: 22px;
 }
+.experienceGroups {
+  display: grid;
+  gap: 56px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+.experienceGroupHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.experienceGroupHeading span {
+  color: var(--subtext);
+  font-size: 15px;
+  font-weight: 400;
+}
 .experienceList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   border-top: 1px solid var(--line);
 }
 .experienceItem {
   display: grid;
-  grid-template-columns: 30% 1fr;
-  padding: 30px 0;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  padding: 22px 0;
   border-bottom: 1px solid var(--line);
 }
-.experienceItem > p {
-  margin: 4px 0;
-  font-size: 10px;
+.experienceDate {
+  padding-top: 3px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.7;
   color: var(--subtext);
 }
-.experienceItem h3 {
+.experienceItem h4 {
   margin: 0 0 6px;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
 }
-.experienceItem span {
+.experienceDescription {
+  max-width: 720px;
+  margin: 0;
   color: var(--subtext);
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
 }
 .contact {
   min-height: 70vh;
@@ -536,7 +571,18 @@ footer {
   }
   .experienceItem {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 6px;
+    padding: 20px 0;
+  }
+  .experienceGroups {
+    gap: 40px;
+  }
+  .experienceGroupHeading {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .experienceDate {
+    padding-top: 0;
   }
   .contact {
     min-height: 70vh;
