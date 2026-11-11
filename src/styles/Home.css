@@ -117,12 +117,16 @@ a {
   background: none;
 }
 .hero {
-  min-height: calc(100vh - 90px);
-  padding: 7vh 8vw 10vh;
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  gap: 7vw;
+  min-height: calc(100svh - 90px);
+  padding: 80px 8vw 96px;
+  display: flex;
   align-items: center;
+}
+.heroText {
+  width: 100%;
+  min-width: 0;
+  container-type: inline-size;
+  text-align: left;
 }
 .heroSub,
 .smallTitle,
@@ -133,9 +137,9 @@ a {
   color: var(--subtext);
 }
 .hero h1 {
-  margin: 0;
-  font-size: clamp(58px, 7vw, 110px);
-  line-height: 0.92;
+  margin: 0 0 48px;
+  font-size: clamp(40px, 16cqi, 144px);
+  line-height: 1.02;
   letter-spacing: -0.06em;
   font-weight: 500;
   color: var(--text);
@@ -152,37 +156,45 @@ a {
 .experienceItem h4 {
   color: var(--text);
 }
+.hero .heroSub {
+  margin: 0 0 24px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.heroDetails {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: end;
+}
+.heroCatch {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 500;
+  line-height: 1.7;
+}
 .heroDescription {
-  margin: 45px 0;
+  max-width: 640px;
+  margin: 0;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 1.8;
   color: var(--subtext);
 }
 .viewWorks {
-  display: flex;
+  display: inline-flex;
   width: fit-content;
-  gap: 50px;
+  max-width: 100%;
+  gap: 20px;
   align-items: center;
-  padding-bottom: 8px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--text);
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 1.7;
 }
-.heroImage {
-  aspect-ratio: 4 / 5;
-  background: var(--surface-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #a89d8e;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-}
-.imageCaption {
-  margin-top: 12px;
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  color: var(--subtext);
+.viewWorks > span:last-child {
+  flex-shrink: 0;
 }
 .section {
   padding: 130px 8vw;
@@ -534,16 +546,6 @@ footer {
   height: 100%;
   object-fit: contain;
 }
-.heroImage {
-  width: 100%;
-  overflow: hidden;
-}
-
-.heroImage img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 @media (max-width: 768px) {
   .header {
     height: 75px;
@@ -605,16 +607,18 @@ footer {
   }
   .hero {
     min-height: auto;
-    padding: 70px 7vw 100px;
-    grid-template-columns: 1fr;
+    padding: 64px 7vw 72px;
   }
   .hero h1 {
-    font-size: clamp(55px, 16vw, 80px);
+    margin-bottom: 32px;
+    font-size: clamp(38px, 16cqi, 84px);
   }
-  .heroVisual {
-    margin-top: 30px;
-    width: 75%;
-    margin-left: auto;
+  .heroDetails {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .heroDescription {
+    font-size: 15px;
   }
   .section {
     padding: 90px 7vw;

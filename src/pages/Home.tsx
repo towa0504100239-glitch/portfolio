@@ -3,8 +3,6 @@ import "../styles/Home.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import topImage from "../assets/top.png";
-
 import { worksNewestFirst } from "../data/works";
 import { experienceGroups } from "../data/experience";
 
@@ -195,29 +193,20 @@ const Home = () => {
               <span>and Improve.</span>
             </h1>
 
-            <p className="heroDescription">
-              利用者の課題を考え、技術で形にする。
-              <br />
-              システム全体を考えられるエンジニアを目指しています。
-            </p>
-
-            <a href="#works" className="viewWorks">
-              View Works
-              <span>↓</span>
-            </a>
-          </div>
-
-          <div className="heroVisual">
-            <div className="heroImage">
-              <img
-                src={topImage}
-                alt="開発をイメージしたワークスペース"
-              />
+            <div className="heroDetails">
+              <div>
+                <p className="heroCatch">
+                  利用者の課題を考え、技術で形にする。
+                </p>
+                <p className="heroDescription">
+                  要件定義から設計・実装・改善まで。システム全体を見渡しながら、価値あるサービスづくりに取り組んでいます。
+                </p>
+              </div>
+              <a href="#works" className="viewWorks">
+                <span>View Works / 制作実績を見る</span>
+                <span aria-hidden="true">↓</span>
+              </a>
             </div>
-
-            <p className="imageCaption">
-              WEB / APPLICATION / DESIGN
-            </p>
           </div>
         </section>
 
