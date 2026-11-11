@@ -64,15 +64,16 @@
 .detailHero h1 {
   margin: 20px 0 0;
   font-family: "DM Sans", sans-serif;
-  font-size: clamp(60px, 10vw, 140px);
+  font-size: 36px;
   font-weight: 500;
-  line-height: 0.95;
+  line-height: 1.4;
   letter-spacing: -0.06em;
 }
 
 .detailCatch {
   margin: 30px 0 0;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 /* ==============================
@@ -97,8 +98,8 @@
 
 .detailMeta p {
   margin: 10px 0 0;
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 /* ==============================
@@ -122,7 +123,7 @@
 
 .detailSection {
   margin: 0 8vw;
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .detailSectionNumber {
@@ -135,23 +136,26 @@
 }
 
 .detailSectionContent h2 {
-  margin: 0 0 40px;
-  font-size: clamp(30px, 4vw, 52px);
+  margin: 0 0 28px;
+  font-size: clamp(32px, 3vw, 36px);
+  text-align: center;
   font-weight: 500;
   line-height: 1.45;
   letter-spacing: -0.04em;
 }
 
 .detailText {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
+  text-align: left;
+  overflow-wrap: anywhere;
 }
 
 .detailText p {
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   color: #514c46;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .detailText p:last-child {
@@ -193,7 +197,11 @@
 .featureItem p {
   margin: 0;
   color: #6f6963;
-  font-size: 13px;
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: left;
+  overflow-wrap: anywhere;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -203,7 +211,7 @@
 
 .detailLinks {
   margin: 0 8vw;
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .detailLinks > p {
@@ -243,7 +251,7 @@
 }
 .detailSection {
   margin: 0 8vw;
-  padding: 100px 0;
+  padding: 40px 0;
   border-bottom: 1px solid rgba(41, 38, 33, 0.1);
 }
 .detailSection.v2{
@@ -295,7 +303,7 @@
   }
 
   .detailHero h1 {
-    font-size: clamp(52px, 17vw, 80px);
+    font-size: 32px;
   }
 
   .detailCatch {
@@ -315,7 +323,7 @@
 
   .detailSection {
     margin: 0 24px;
-    padding: 70px 0;
+    padding: 32px 0;
   }
 
   .detailSectionNumber {
@@ -323,18 +331,19 @@
   }
 
   .detailSectionContent h2 {
-    margin-bottom: 35px;
-    font-size: 32px;
+    margin-bottom: 24px;
+    font-size: 28px;
   }
 
   .detailText {
-    max-width: none;
-    margin: 0;
+    max-width: 720px;
+    margin: 0 auto;
   }
 
-  .detailText p {
-    font-size: 13px;
-    line-height: 1.9;
+  .detailText p,
+  .featureItem p {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
   .featureGrid {
@@ -353,7 +362,7 @@
 
   .detailLinks {
     margin: 0 24px;
-    padding: 70px 0;
+    padding: 32px 0;
   }
 
   .detailLinks a {

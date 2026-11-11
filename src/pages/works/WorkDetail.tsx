@@ -72,8 +72,6 @@ const WorkDetail = () => {
             "0"
           );
 
-          const titleLines = section.title.split("\n");
-
           return (
             <section
               className={`detailSection ${
@@ -86,16 +84,7 @@ const WorkDetail = () => {
               </p>
 
               <div className="detailSectionContent">
-                <h2>
-                  {titleLines.map((line, lineIndex) => (
-                    <span key={lineIndex}>
-                      {line}
-
-                      {lineIndex <
-                        titleLines.length - 1 && <br />}
-                    </span>
-                  ))}
-                </h2>
+                <h2>{section.title.replace(/\n/g, "")}</h2>
 
                 {section.features ? (
                   <div className="featureGrid">
