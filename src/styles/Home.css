@@ -243,26 +243,74 @@ a {
   color: var(--subtext);
 }
 .skillGrid {
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 .skillCard {
-  padding: 35px 0;
-  display: grid;
-  grid-template-columns: 80px 0.7fr 1fr;
-  border-bottom: 1px solid var(--line);
-  align-items: center;
+  min-width: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  text-align: left;
 }
-.skillCard > span {
-  font-size: 10px;
+.skillCardHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.skillCardHeading > div {
+  min-width: 0;
+}
+.skillNumber {
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: 1.6;
   color: var(--subtext);
 }
 .skillCard h3 {
-  margin: 0;
-  font-size: 23px;
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 26px;
   font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
-.skillCard p {
+.skillDescription {
   margin: 0;
+  color: var(--subtext);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.skillTag {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  max-width: 100%;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--background);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.skillTagNote {
   color: var(--subtext);
   font-size: 13px;
 }
@@ -554,14 +602,16 @@ footer {
   .aboutImage {
     width: 75%;
   }
-  .skillCard {
-    grid-template-columns: 40px 1fr;
-    gap: 10px;
+  .skillGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  .skillCard p {
-    grid-column: 2;
-    margin-top: 10px;
-    line-height: 1.7;
+  .skillCard {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .skillCard h3 {
+    font-size: 24px;
   }
   .workGrid {
     grid-template-columns: 1fr;

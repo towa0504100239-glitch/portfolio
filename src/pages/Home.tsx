@@ -9,6 +9,66 @@ import aboutImage from "../assets/about.png";
 import { worksNewestFirst } from "../data/works";
 import { experienceGroups } from "../data/experience";
 
+type SkillCategory = {
+  name: string;
+  description: string;
+  technologies: { name: string; note?: string }[];
+};
+
+const skillCategories: SkillCategory[] = [
+  {
+    name: "Frontend",
+    description: "画面・UI開発",
+    technologies: [
+      { name: "React" },
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "JavaScript" },
+      { name: "React Native" },
+      { name: "Expo" },
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "SwiftUI", note: "学習経験" },
+    ],
+  },
+  {
+    name: "Backend",
+    description: "サーバー・API開発",
+    technologies: [
+      { name: "Java" },
+      { name: "Spring Boot" },
+      { name: "PHP" },
+      { name: "Laravel" },
+      { name: "NestJS" },
+      { name: "Node.js" },
+    ],
+  },
+  {
+    name: "Database",
+    description: "データベース・データアクセス",
+    technologies: [
+      { name: "PostgreSQL" },
+      { name: "MySQL" },
+      { name: "Supabase", note: "BaaS" },
+      { name: "Kysely", note: "クエリビルダー" },
+    ],
+  },
+  {
+    name: "Tools & Infrastructure",
+    description: "開発ツール・インフラ",
+    technologies: [
+      { name: "Git" },
+      { name: "GitHub" },
+      { name: "Docker" },
+      { name: "Postman" },
+      { name: "AWS", note: "EC2 / 学習・演習経験" },
+      { name: "Vercel" },
+      { name: "WordPress" },
+      { name: "Linux", note: "学習・演習経験" },
+    ],
+  },
+];
+
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] =
@@ -213,31 +273,29 @@ const Home = () => {
           </div>
 
           <div className="skillGrid">
-            <div className="skillCard">
-              <span>01</span>
-              <h3>Frontend</h3>
-              <p>
-                React / TypeScript / JavaScript /
-                HTML / CSS
-              </p>
-            </div>
-
-            <div className="skillCard">
-              <span>02</span>
-              <h3>Backend</h3>
-              <p>
-                Java / Spring Boot / PHP / Laravel /
-                MySQL
-              </p>
-            </div>
-
-            <div className="skillCard">
-              <span>03</span>
-              <h3>Tools</h3>
-              <p>
-                Git / GitHub / WordPress / Postman
-              </p>
-            </div>
+            {skillCategories.map((category, index) => (
+              <article className="skillCard" key={category.name}>
+                <div className="skillCardHeading">
+                  <span className="skillNumber">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3>{category.name}</h3>
+                    <p className="skillDescription">{category.description}</p>
+                  </div>
+                </div>
+                <ul className="skillTags" aria-label={`${category.name}の技術`}>
+                  {category.technologies.map((technology) => (
+                    <li className="skillTag" key={technology.name}>
+                      <span>{technology.name}</span>
+                      {technology.note && (
+                        <span className="skillTagNote">{technology.note}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </section>
 
