@@ -223,9 +223,8 @@ a {
 }
 .aboutContent {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  column-gap: clamp(32px, 5vw, 72px);
-  row-gap: 40px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
   max-width: 1000px;
   margin: 0 auto;
@@ -245,26 +244,25 @@ a {
   font-weight: 500;
   letter-spacing: -0.04em;
 }
+.aboutLead h3 span {
+  display: inline-block;
+  white-space: nowrap;
+}
 .aboutText {
-  grid-column: 2;
-  grid-row: 1 / span 2;
   max-width: 720px;
 }
 .aboutText p {
-  margin: 0 0 20px;
+  margin: 0;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.9;
   color: var(--text);
 }
-.aboutText p:last-child {
-  margin-bottom: 0;
-}
 .aboutStrengths {
-  grid-column: 1;
   display: grid;
-  gap: 24px;
-  margin: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin: 24px 0 0;
 }
 .aboutStrength {
   padding-top: 18px;
@@ -627,16 +625,15 @@ footer {
     margin-bottom: 50px;
   }
   .aboutContent {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
   .aboutLead h3 {
     font-size: clamp(30px, 8vw, 36px);
   }
-  .aboutText,
   .aboutStrengths {
-    grid-column: auto;
-    grid-row: auto;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 12px;
   }
   .aboutText p {
     font-size: 15px;
